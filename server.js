@@ -53,6 +53,12 @@ app.get('/help', (req, res) => {
     });
 })
 
+app.get('/project', (req, res) => {
+    res.render('project.hbs', {
+        pageTitle: 'This is my project..'
+    })
+});
+
 app.get('/bad', (req, res) => {
     res.send({
         errorMessage: 'Unable to load the content'
